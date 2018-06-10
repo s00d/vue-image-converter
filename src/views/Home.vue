@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" @dragover.prevent @drop="onFileChange">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" @dragover.prevent @drop="onFileChange" @dblclick="$refs['image_'].click()">
         <ImageView 
           :imgUrl="image" 
           :invert="invert" 
@@ -12,6 +12,9 @@
           :type="types[selectType]"
           :preview="preview"
         />
+        <input type="file" accept=".png,.jpeg,.jpg,.bmp,.gif,.tiff" @change="onFileChange" :ref="'image_'" hidden />
+        <div class="btn btn-primary btn-block" @click="$refs['image_'].click()">open image</div>
+
       </main>
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">

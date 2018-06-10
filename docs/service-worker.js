@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.0cbfb9ca205ea98b218d119d4e329059.js"
+  "precache-manifest.eab24a297368285aabcf7ccbccc82a4c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-image-converter"});
